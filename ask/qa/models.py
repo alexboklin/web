@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# "By default, Django adds a Manager with the name objects﻿ to every Django model class"  (с)docs.djangoproject.com
 class QuestionManager(models.Manager):                                          
     def new():                                                              
         pass                                                            
