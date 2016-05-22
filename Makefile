@@ -13,4 +13,5 @@ setup_gunicorn:
 setup_mysql:
 	sudo /etc/init.d/mysql restart
 	mysql -uroot -e "create database stepic_db"
-	cd web/ask && python manage.py syncdb
+	python ask/manage.py syncdb
+	#cd web/ask && python manage.py syncdb
