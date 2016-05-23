@@ -62,7 +62,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'stepic_db',
         'USER': 'admin',
-        'PASSWORD': 'pass',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '',
     }
