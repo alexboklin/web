@@ -23,3 +23,9 @@ syncdb:
 set_github_credentials:
 	git config --global user.email "alex.boklin@gmail.com"
 	git config --global user.name "alexboklin"
+
+install_autofixture:
+	sudo pip install django-autofixture
+
+generate_data:
+	python ask/manage.py loadtestdata qa.Question:20 qa.Answer:50
