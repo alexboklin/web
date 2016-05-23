@@ -1,5 +1,7 @@
 all: setup_nginx setup_gunicorn setup_mysql create_db install_autofixture syncdb
 
+restart: setup_nginx setup_gunicorn setup_mysql
+
 setup_nginx:
 	sudo rm -rf /etc/nginx/sites-enabled/default
 	sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/default
