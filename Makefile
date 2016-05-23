@@ -1,4 +1,4 @@
-all: setup_nginx setup_gunicorn setup_mysql
+all: setup_nginx setup_gunicorn setup_mysql create_db syncdb
 
 setup_nginx:
 	sudo rm -rf /etc/nginx/sites-enabled/default
@@ -12,6 +12,14 @@ setup_gunicorn:
 
 setup_mysql:
 	sudo /etc/init.d/mysql restart
-	mysql -uroot -e "create database stepic_db"
-	python ask/manage.py syncdb
 	#cd web/ask && python manage.py syncdb
+
+create_db:
+	mysql -uroot -e "create database stepic_db"
+
+syncdb:	
+	python ask/manage.py syncdb	
+	
+set_github_credentials:
+	git config --global user.email "alex.boklin@gmail.com"
+	git config --global user.name "alexboklin"
