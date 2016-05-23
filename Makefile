@@ -1,4 +1,4 @@
-all: setup_nginx setup_gunicorn setup_mysql create_db syncdb
+all: setup_nginx setup_gunicorn setup_mysql create_db install_autofixture syncdb
 
 setup_nginx:
 	sudo rm -rf /etc/nginx/sites-enabled/default
